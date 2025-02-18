@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "JetBrains Mono", "Inter", system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply antialiased text-gray-900 dark:text-white;
+    background-color: #f8fafc;
+    background-image: radial-gradient(#1f2937 0.5px, transparent 0.5px),
+      radial-gradient(#1f2937 0.5px, #f8fafc 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+  }
+
+  body.dark {
+    @apply bg-gray-900;
+    background-image: none;
+  }
+}
+
+/* Компоненты */
+.card {
+  @apply bg-white dark:bg-gray-800 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out;
+}

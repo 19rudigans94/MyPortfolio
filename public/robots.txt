@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+# Разрешаем индексацию основных страниц
+Allow: /projects
+Allow: /experience
+Allow: /skills
+Allow: /contact
+
+# Sitemap
+Sitemap: https://your-portfolio-url.com/sitemap.xml
