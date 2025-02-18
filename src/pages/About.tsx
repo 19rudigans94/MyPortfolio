@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/lib/supabase";
+import PageTitle from "@/components/SEO/PageTitle";
 
 export default function About() {
   const { data: profile, isLoading: isProfileLoading } = useQuery({
@@ -43,13 +44,10 @@ export default function About() {
 
   return (
     <>
-      <Helmet>
-        <title>Обо мне - Frontend Developer Portfolio</title>
-        <meta
-          name="description"
-          content="Узнайте больше о моем опыте, навыках и подходе к разработке. Frontend разработчик с фокусом на создание современных веб-приложений."
-        />
-      </Helmet>
+      <PageTitle
+        title="Обо мне"
+        description="Узнайте больше о моем опыте, навыках и подходе к разработке. Frontend разработчик с фокусом на создание современных веб-приложений"
+      />
 
       <div className="max-w-4xl mx-auto space-y-8 animate-fadeIn">
         <h1 className="text-3xl font-bold mb-8">Обо мне</h1>

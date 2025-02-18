@@ -10,4 +10,4 @@ Allow: /skills
 Allow: /contact
 
 # Sitemap
-Sitemap: https://your-portfolio-url.com/sitemap.xml
+Sitemap: https://viktor-rudi.com/sitemap.xml

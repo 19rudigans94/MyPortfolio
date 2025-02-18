@@ -12,6 +12,7 @@ import CodeBracketSquareIcon from "@heroicons/react/24/outline/CodeBracketSquare
 import UserCircleIcon from "@heroicons/react/24/outline/UserCircleIcon";
 import ServerStackIcon from "@heroicons/react/24/outline/ServerStackIcon";
 import CloudIcon from "@heroicons/react/24/outline/CloudIcon";
+import PageTitle from "@/components/SEO/PageTitle";
 
 export default function Home() {
   const { data: profile } = useQuery({
@@ -85,13 +86,13 @@ export default function Home() {
 
   return (
     <>
-      <Helmet>
-        <title>{profile?.full_name || "Frontend Developer"} | Portfolio</title>
-        <meta
-          name="description"
-          content={profile?.bio || "Frontend Developer Portfolio"}
-        />
-      </Helmet>
+      <PageTitle
+        title={profile?.full_name || "Frontend Developer"}
+        description={
+          profile?.bio ||
+          "Профессиональное портфолио frontend разработчика с опытом создания современных веб-приложений"
+        }
+      />
 
       {/* Hero Section */}
       <section className="py-20 text-center card animate-fadeIn">

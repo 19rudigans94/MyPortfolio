@@ -14,6 +14,7 @@ import AdminSkills from "./Admin/AdminSkills";
 import AdminCertificates from "./Admin/AdminCertificates";
 import AdminProfile from "./Admin/AdminProfile";
 import AdminExperiences from "./Admin/AdminExperiences";
+import PageTitle from "@/components/SEO/PageTitle";
 
 const navigation = [
   { name: "Обзор", href: "/admin", icon: TableCellsIcon },
@@ -39,9 +40,10 @@ export default function Admin() {
 
   return (
     <>
-      <Helmet>
-        <title>Админ панель | Виктор Руди</title>
-      </Helmet>
+      <PageTitle
+        title="Админ панель"
+        description="Административная панель для управления контентом портфолио"
+      />
 
       <div className="flex min-h-[calc(100vh-4rem)]">
         {/* Sidebar */}

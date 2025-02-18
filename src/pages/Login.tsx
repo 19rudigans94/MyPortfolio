@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { useAuth } from '@/lib/auth'
 import toast from 'react-hot-toast'
+import PageTitle from "@/components/SEO/PageTitle";
 
 export default function Login() {
   const navigate = useNavigate()
@@ -31,9 +32,10 @@ export default function Login() {
 
   return (
     <>
-      <Helmet>
-        <title>Вход - Frontend Developer Portfolio</title>
-      </Helmet>
+      <PageTitle
+        title="Вход"
+        description="Страница входа в административную панель портфолио"
+      />
 
       <div className="max-w-md mx-auto">
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">Вход</h1>

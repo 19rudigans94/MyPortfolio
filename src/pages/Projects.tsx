@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async'
 import { useQuery } from '@tanstack/react-query'
 import { supabase } from '@/lib/supabase'
+import PageTitle from "@/components/SEO/PageTitle";
 
 export default function Projects() {
   const { data: projects, isLoading } = useQuery({
@@ -19,13 +20,10 @@ export default function Projects() {
 
   return (
     <>
-      <Helmet>
-        <title>Проекты | Виктор Руди</title>
-        <meta
-          name="description"
-          content="Портфолио проектов frontend разработчика. Современные веб-приложения и креативные решения."
-        />
-      </Helmet>
+      <PageTitle
+        title="Проекты"
+        description="Портфолио проектов frontend разработчика. Современные веб-приложения и креативные решения"
+      />
       
       <div className="max-w-7xl mx-auto animate-fadeIn">
         <h1 className="text-4xl font-bold text-center mb-12">Мои проекты</h1>

@@ -1,16 +1,16 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 interface StructuredData {
-  '@context': string;
-  '@type': string;
+  "@context": string;
+  "@type": string;
   name: string;
   jobTitle: string;
   url: string;
   sameAs: string[];
   knowsAbout: string[];
   worksFor: {
-    '@type': string;
+    "@type": string;
     name: string;
   };
   description: string;
@@ -18,28 +18,29 @@ interface StructuredData {
 
 const JsonLd: React.FC = () => {
   const structuredData: StructuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Person',
-    name: 'Руди Виктор',
-    jobTitle: 'Frontend Developer',
-    url: 'https://your-portfolio-url.com',
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Руди Виктор",
+    jobTitle: "Frontend Developer",
+    url: "https://viktor-rudi.com",
     sameAs: [
-      'https://github.com/your-github',
-      'https://linkedin.com/in/your-linkedin',
+      "https://github.com/19rudigans94",
+      "https://www.linkedin.com/in/viktor-rudi/",
     ],
     knowsAbout: [
-      'Frontend Development',
-      'React',
-      'TypeScript',
-      'JavaScript',
-      'Tailwind CSS',
-      'UI/UX Design'
+      "Frontend Development",
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind CSS",
+      "UI/UX Design",
     ],
     worksFor: {
-      '@type': 'Organization',
-      name: 'Freelance'
+      "@type": "Organization",
+      name: "Freelance",
     },
-    description: 'Frontend разработчик, специализирующийся на создании современных веб-приложений с использованием React, TypeScript и Tailwind CSS'
+    description:
+      "Frontend разработчик, специализирующийся на создании современных веб-приложений с использованием React, TypeScript и Tailwind CSS",
   };
 
   return (
