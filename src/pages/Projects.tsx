@@ -1,22 +1,22 @@
-import { Helmet } from 'react-helmet-async'
-import { useQuery } from '@tanstack/react-query'
-import { supabase } from '@/lib/supabase'
+import { Helmet } from "react-helmet-async";
+import { useQuery } from "@tanstack/react-query";
+import { supabase } from "@/lib/supabase";
 import PageTitle from "@/components/SEO/PageTitle";
 
 export default function Projects() {
   const { data: projects, isLoading } = useQuery({
-    queryKey: ['projects'],
+    queryKey: ["projects"],
     queryFn: async () => {
       const { data, error } = await supabase
-        .from('projects')
-        .select('*')
-        .eq('user_id', '8c79a6d6-88a4-4a77-9d80-2c9e8812f485')
-        .order('created_at', { ascending: false })
-      
-      if (error) throw error
-      return data
-    }
-  })
+        .from("projects")
+        .select("*")
+        .eq("user_id", "8c79a6d6-88a4-4a77-9d80-2c9e8812f485")
+        .order("created_at", { ascending: false });
+
+      if (error) throw error;
+      return data;
+    },
+  });
 
   return (
     <>
@@ -24,10 +24,12 @@ export default function Projects() {
         title="Проекты"
         description="Портфолио проектов frontend разработчика. Современные веб-приложения и креативные решения"
       />
-      
+
       <div className="max-w-7xl mx-auto animate-fadeIn">
-        <h1 className="text-4xl font-bold text-center mb-12">Мои проекты</h1>
-        
+        <h1 className="text-4xl font-bold text-center mb-12 dark:text-gray-700">
+          Мои проекты
+        </h1>
+
         {isLoading ? (
           <div className="text-center">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900 dark:border-white mx-auto"></div>
@@ -96,5 +98,5 @@ export default function Projects() {
         )}
       </div>
     </>
-  )
+  );
 }

@@ -105,13 +105,13 @@ export default function Home() {
         <div className="flex gap-4 justify-center">
           <Link
             to="/projects"
-            className="bg-black text-white dark:bg-white dark:text-black px-6 py-3 rounded-full font-medium"
+            className="bg-black text-white dark:bg-white dark:text-black px-4 py-3 rounded-full font-medium"
           >
             Мои проекты
           </Link>
           <Link
             to="/contact"
-            className="bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-white px-6 py-3 rounded-full font-medium"
+            className="bg-gray-100 text-gray-900 dark:bg-gray-600 dark:text-white px-4 py-3 rounded-full font-medium"
           >
             Связаться со мной
           </Link>
